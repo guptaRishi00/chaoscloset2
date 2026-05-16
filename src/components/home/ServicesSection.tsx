@@ -93,7 +93,7 @@ export default function ServicesSection() {
 
           {/* CTA */}
           <Link
-            href="/collections"
+            href="https://www.instagram.com/_chaos.closet_/"
             className="
               group flex w-fit items-center gap-2
               rounded-full border border-black/10

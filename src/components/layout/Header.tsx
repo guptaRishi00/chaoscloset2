@@ -52,7 +52,7 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/contact-us"
+              href="https://www.instagram.com/_chaos.closet_/"
               className={`relative px-6 py-4 bg-white hover:bg-[#fa2282] hover:text-white text-black font-semibold overflow-hidden group transition-all duration-300 hover:scale-105 rounded-full`}
             >
               <span
@@ -83,7 +83,7 @@ export default function Header() {
           >
             <div className="flex w-full flex-col gap-4 mt-4">
               <Link
-                href="/contact-us"
+                href="https://www.instagram.com/_chaos.closet_/"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative px-6 py-3 border border-white text-white font-semibold rounded-full overflow-hidden group transition-all duration-300 text-center"
               >

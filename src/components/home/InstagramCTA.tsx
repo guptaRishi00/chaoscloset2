@@ -56,7 +56,7 @@ export default function InstagramCTA() {
         {/* Button Wrapper */}
         <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row">
           <Link
-            href="https://instagram.com/yourhandle"
+            href="https://www.instagram.com/_chaos.closet_/"
             target="_blank"
             rel="noopener noreferrer"
             className="

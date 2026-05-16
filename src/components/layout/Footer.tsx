@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Instagram Link */}
           <Link
-            href="https://instagram.com/yourhandle"
+            href="https://www.instagram.com/_chaos.closet_/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:scale-105 hover:bg-[#fa2282] hover:text-white"
