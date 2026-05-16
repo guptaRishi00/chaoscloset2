@@ -4,7 +4,7 @@ export default function Herosection() {
   const logo = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png"];
 
   return (
-    <section className="relative min-h-screen lg:min-h-[96vh] overflow-hidden rounded-[20px] lg:rounded-[20px]">
+    <section className="relative h-auto lg:min-h-[96vh] overflow-hidden rounded-[20px] lg:rounded-[20px]">
       {/* Background Video */}
       <video
         src="/assets/hero2.mp4"
@@ -19,7 +19,7 @@ export default function Herosection() {
       <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-md" />
 
       {/* Content */}
-      <div className="relative z-20 flex min-h-screen lg:min-h-[96vh] flex-col px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+      <div className="relative z-20 flex min-h-[80vh] lg:min-h-[96vh] flex-col px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
         {/* Header */}
         <Header />
 
