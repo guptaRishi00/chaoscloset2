@@ -1,32 +1,36 @@
-import NewsGridSection from "@/components/garbage/NewsGridSection";
 import AboutSection from "@/components/home/AboutSection";
 import Herosection from "@/components/home/Herosection";
+import InstagramCTA from "@/components/home/InstagramCTA";
 import ServicesSection from "@/components/home/ServicesSection";
 import TextMarquee from "@/components/home/TextMarquee";
 import VideoSection from "@/components/home/VideoSection";
 import Footer from "@/components/layout/Footer";
 import LogoLoop from "@/components/ui/LogoLoop";
-import {
-  SiNextdotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 
 export default function HomePage() {
-  const techLogos = [
-    { node: <SiReact />, title: "React", href: "https://react.dev" },
-    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  const imageLogos = [
+    { src: "/nike2.png", alt: "Company 1", href: "https://company1.com" },
+    { src: "/stussy.png", alt: "Company 2", href: "https://company2.com" },
+    { src: "/carhartt.png", alt: "Company 3", href: "https://company3.com" },
     {
-      node: <SiTypescript />,
-      title: "TypeScript",
-      href: "https://www.typescriptlang.org",
+      src: "/stone-island.png",
+      alt: "Company 3",
+      href: "https://company3.com",
+    },
+    { src: "/arcteryx.png", alt: "Company 3", href: "https://company3.com" },
+    { src: "/supreme2.png", alt: "Company 3", href: "https://company3.com" },
+    { src: "/dickies.png", alt: "Company 3", href: "https://company3.com" },
+    {
+      src: "/polo-ralph-lauren.png",
+      alt: "Company 3",
+      href: "https://company3.com",
     },
     {
-      node: <SiTailwindcss />,
-      title: "Tailwind CSS",
-      href: "https://tailwindcss.com",
+      src: "/tommy-hilfiger.webp",
+      alt: "Company 3",
+      href: "https://company3.com",
     },
+    { src: "/bape.png", alt: "Company 3", href: "https://company3.com" },
   ];
 
   return (
@@ -34,11 +38,11 @@ export default function HomePage() {
       <Herosection />
 
       {/* Trusted By Section */}
-      <section className="flex items-center gap-8 overflow-hidden px-6 py-4">
+      <section className="flex lg:flex-row flex-col items-center gap-8 overflow-hidden lg:px-6 lg:py-4">
         {/* Label */}
         <div className="shrink-0">
           <p className="text-sm font-medium tracking-wide text-black/60 uppercase">
-            Trusted By
+            u might find
           </p>
         </div>
 
@@ -48,10 +52,10 @@ export default function HomePage() {
         {/* Logo Loop */}
         <div className="relative min-w-0 flex-1 overflow-hidden">
           <LogoLoop
-            logos={techLogos}
+            logos={imageLogos}
             speed={50}
             direction="left"
-            logoHeight={28}
+            logoHeight={50}
             gap={90}
             hoverSpeed={0}
             scaleOnHover
@@ -66,7 +70,7 @@ export default function HomePage() {
       <VideoSection />
       <ServicesSection />
       <TextMarquee />
-      <NewsGridSection />
+      <InstagramCTA />
       <Footer />
     </main>
   );

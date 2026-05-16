@@ -1,64 +1,70 @@
 import Header from "../layout/Header";
 
-export default function Herosection({}: any) {
+export default function Herosection() {
+  const logo = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png"];
+
   return (
-    <div className="relative lg:min-h-[96.5vh] rounded-[20px] overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[96vh] overflow-hidden rounded-[20px] lg:rounded-[20px]">
+      {/* Background Video */}
       <video
-        src="/assets/hero.mp4"
+        src="/assets/hero2.mp4"
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 z-10 backdrop-blur-xl" />
+      {/* Overlay */}
+      <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-md" />
 
-      <div className="absolute z-20 p-5 w-full flex flex-col items-center justify-between gap-10 h-full">
+      {/* Content */}
+      <div className="relative z-20 flex min-h-screen lg:min-h-[96vh] flex-col px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+        {/* Header */}
         <Header />
 
-        <div className="w-full flex items-center justify-center text-center ">
-          <div className="flex flex-col items-center justify-center gap-2">
-            <h1 className="text-4xl md:text-5xl lg:text-9xl font-bold text-white">
-              We Engineer
+        {/* Hero Center */}
+        <div className="flex flex-1 items-center justify-center py-10 sm:py-16">
+          <div className="flex max-w-6xl flex-col items-center text-center">
+            {/* Heading */}
+            <h1 className="text-white font-bold leading-[0.9] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-9xl">
+              We Curate
+              <br />
+              Streetwear Chaos
             </h1>
 
-            <div className="flex items-center justify-center gap-5">
-              <p className="text-4xl md:text-5xl lg:text-9xl font-bold text-white">
-                Digital
-              </p>
-              <div className="w-50 h-22 overflow-hidden rounded-full">
-                <video
-                  src="/assets/hero.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className=""
-                />
-              </div>
-              <p className="text-4xl md:text-5xl lg:text-9xl font-bold text-white">
-                Solutions
-              </p>
-            </div>
-
-            <p className="text-lg md:text-xl lg:text-5xl font-medium text-white mt-5">
-              crafted for impact
+            {/* Subtitle */}
+            <p className="mt-4 max-w-xl text-sm font-medium text-zinc-200 sm:text-base md:text-lg lg:text-2xl">
+              Curated brands, vintage heat & limited drops for outsiders.
             </p>
+
+            {/* Logos */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-8 md:gap-x-10 lg:gap-x-14">
+              {logo.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt={`Partner Logo ${index + 1}`}
+                  className="h-4 w-auto object-contain opacity-90 sm:h-5 md:h-7 lg:h-9"
+                />
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="w-full flex items-center justify-between">
-          <p className="text-start text-white font-medium max-w-sm text-sm">
-            Organic media planners creating, distributing & optimising
-            search-first content for SEO, Social, PR, Ai and LLM search
+        {/* Bottom Text */}
+        <div className="flex flex-col gap-4 border-t border-white/10 pt-5 text-white/90 md:flex-row md:items-end md:justify-between">
+          <p className="max-w-xs text-center text-[11px] leading-relaxed sm:text-xs md:text-left md:text-sm">
+            Premium thrifted streetwear creating limited drops for rebels,
+            outsiders and chaos lovers.
           </p>
-          <p className="text-end text-white font-medium max-w-sm text-sm">
-            Organic media planners creating, distributing & optimising
-            search-first content for SEO, Social, PR, Ai and LLM search
+
+          <p className="max-w-xs text-center text-[11px] leading-relaxed sm:text-xs md:text-right md:text-sm">
+            Curated vintage, authentic streetwear and 1/1 drops from Dibrugarh,
+            Assam.
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
